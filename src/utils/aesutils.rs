@@ -72,5 +72,5 @@ let cipher = Aes256Cbc::new_var(&key, iv)?;
 let mut buffer = ciphertext.to_vec();
 let decrypted = cipher.decrypt(&mut buffer)?;
 
-ok(str::from_utf8(decrypted)?.to_string())
+Ok(str::from_utf8(decrypted)?.to_string())
 }
